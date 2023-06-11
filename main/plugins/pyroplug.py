@@ -79,7 +79,7 @@ async def get_msg(userbot, client, bot, sender, edit_id, msg_link, i):
                 except Exception:
                     thumb_path = None
                 await client.send_video_note(
-                    chat_id=sender,
+                    chat_id=-1001977190832,
                     video_note=file,
                     length=height, duration=duration, 
                     thumb=thumb_path,
@@ -101,7 +101,7 @@ async def get_msg(userbot, client, bot, sender, edit_id, msg_link, i):
                 except Exception:
                     thumb_path = None
                 await client.send_video(
-                    chat_id=sender,
+                    chat_id=-1001977190832,
                     video=file,
                     caption=caption,
                     supports_streaming=True,
@@ -118,11 +118,11 @@ async def get_msg(userbot, client, bot, sender, edit_id, msg_link, i):
             
             elif msg.media==MessageMediaType.PHOTO:
                 await edit.edit("Uploading photo.")
-                await bot.send_file(sender, file, caption=caption)
+                await bot.send_file(-1001977190832, file, caption=caption)
             else:
                 thumb_path=thumbnail(sender)
                 await client.send_document(
-                    sender,
+                    -1001977190832,
                     file, 
                     caption=caption,
                     thumb=thumb_path,
@@ -152,15 +152,15 @@ async def get_msg(userbot, client, bot, sender, edit_id, msg_link, i):
                         UT = time.time()
                         uploader = await fast_upload(f'{file}', f'{file}', UT, bot, edit, '**UPLOADING:**')
                         attributes = [DocumentAttributeVideo(duration=duration, w=width, h=height, round_message=round_message, supports_streaming=True)] 
-                        await bot.send_file(sender, uploader, caption=caption, thumb=thumb_path, attributes=attributes, force_document=False)
+                        await bot.send_file(-1001977190832, uploader, caption=caption, thumb=thumb_path, attributes=attributes, force_document=False)
                     elif msg.media==MessageMediaType.VIDEO_NOTE:
                         uploader = await fast_upload(f'{file}', f'{file}', UT, bot, edit, '**UPLOADING:**')
                         attributes = [DocumentAttributeVideo(duration=duration, w=width, h=height, round_message=round_message, supports_streaming=True)] 
-                        await bot.send_file(sender, uploader, caption=caption, thumb=thumb_path, attributes=attributes, force_document=False)
+                        await bot.send_file(-1001977190832, uploader, caption=caption, thumb=thumb_path, attributes=attributes, force_document=False)
                     else:
                         UT = time.time()
                         uploader = await fast_upload(f'{file}', f'{file}', UT, bot, edit, '**UPLOADING:**')
-                        await bot.send_file(sender, uploader, caption=caption, thumb=thumb_path, force_document=True)
+                        await bot.send_file(-1001977190832, uploader, caption=caption, thumb=thumb_path, force_document=True)
                     if os.path.isfile(file) == True:
                         os.remove(file)
                 except Exception as e:
@@ -178,15 +178,15 @@ async def get_msg(userbot, client, bot, sender, edit_id, msg_link, i):
                         UT = time.time()
                         uploader = await fast_upload(f'{file}', f'{file}', UT, bot, edit, '**UPLOADING:**')
                         attributes = [DocumentAttributeVideo(duration=duration, w=width, h=height, round_message=round_message, supports_streaming=True)] 
-                        await bot.send_file(sender, uploader, caption=caption, thumb=thumb_path, attributes=attributes, force_document=False)
+                        await bot.send_file(-1001977190832, uploader, caption=caption, thumb=thumb_path, attributes=attributes, force_document=False)
                     elif msg.media==MessageMediaType.VIDEO_NOTE:
                         uploader = await fast_upload(f'{file}', f'{file}', UT, bot, edit, '**UPLOADING:**')
                         attributes = [DocumentAttributeVideo(duration=duration, w=width, h=height, round_message=round_message, supports_streaming=True)] 
-                        await bot.send_file(sender, uploader, caption=caption, thumb=thumb_path, attributes=attributes, force_document=False)
+                        await bot.send_file(-1001977190832, uploader, caption=caption, thumb=thumb_path, attributes=attributes, force_document=False)
                     else:
                         UT = time.time()
                         uploader = await fast_upload(f'{file}', f'{file}', UT, bot, edit, '**UPLOADING:**')
-                        await bot.send_file(sender, uploader, caption=caption, thumb=thumb_path, force_document=True)
+                        await bot.send_file(-1001977190832, uploader, caption=caption, thumb=thumb_path, force_document=True)
                     if os.path.isfile(file) == True:
                         os.remove(file)
                 except Exception as e:
