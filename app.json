@@ -1,7 +1,5 @@
 {
-    "name": "Save restricted content bot",
-    "description": "Telegram bot to save restricted content.",
-
+    
     "env": {
         "API_HASH": {
             "description": "Your API HASH from my.telegram.org",
