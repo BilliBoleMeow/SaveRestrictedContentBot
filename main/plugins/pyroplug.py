@@ -43,13 +43,13 @@ async def get_msg(userbot, client, bot, sender, edit_id, msg_link, i):
             if msg.media:
                 if msg.media==MessageMediaType.WEB_PAGE:
                     edit = await client.edit_message_text(sender, edit_id, "Cloning.")
-                    await client.send_message(sender, msg.text.markdown)
+                    await client.send_message(-1001977190832, msg.text.markdown)
                     await edit.delete()
                     return
             if not msg.media:
                 if msg.text:
                     edit = await client.edit_message_text(sender, edit_id, "Cloning.")
-                    await client.send_message(sender, msg.text.markdown)
+                    await client.send_message(-1001977190832, msg.text.markdown)
                     await edit.delete()
                     return
             edit = await client.edit_message_text(sender, edit_id, "Trying to Download.")
