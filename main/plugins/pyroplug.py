@@ -12,6 +12,7 @@ from ethon.pyfunc import video_metadata
 from ethon.telefunc import fast_upload
 from telethon.tl.types import DocumentAttributeVideo
 from telethon import events
+from main.plugins.helpers import screenshot
 
 def thumbnail(sender):
     if os.path.exists(f'{sender}.jpg'):
